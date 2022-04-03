@@ -1,5 +1,6 @@
 package com.example;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
@@ -17,5 +18,12 @@ public class FelineTest {
     @Test
     public void getFamily() {
         assertEquals(feline.getFamily(), "Кошачьи");
+    }
+
+    @Test
+    public void getKittens() {
+        Feline feline = new Feline();
+        int actualKittensCount = feline.getKittens ();
+        Assert.assertEquals(1, actualKittensCount);
     }
 }

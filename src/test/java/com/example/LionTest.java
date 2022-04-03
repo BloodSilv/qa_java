@@ -1,29 +1,35 @@
 package com.example;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import java.util.List;
 import static org.junit.Assert.*;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 
+@RunWith(MockitoJUnitRunner.class)
 public class LionTest {
 
-    private Feline feline = new Feline();
-    private final Lion lion = new Lion("Самец", feline);
-
-    public LionTest() throws Exception {}
+    @Mock
+    Feline feline;
 
     @Test
-    public void eatMeat() throws Exception {
-        assertEquals(lion.getFood(), List.of("Животные", "Птицы", "Рыба"));
+    public void getFoodTest() throws Exception {
+        Lion lion = new Lion("Самец", feline);
+        Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        List<String> actual = lion.getFood();
+        List<String> expected = List.of("Животные", "Птицы", "Рыба");
+        assertEquals(expected, actual);
     }
 
     @Test
-    public void doesHaveName() {
-        assertTrue(lion.doesHaveMane());
-    }
-
-    @Test
-    public void testGetKittens() {
-        assertEquals(lion.getKittens(), 1);
+    public void getKittensCountTest() throws Exception {
+        Lion lion = new Lion("Самец", feline);
+        Mockito.when(feline.getKittens()).thenReturn(1);
+        int actual = lion.getKittens();
+        int expected = 1;
+        assertEquals(expected, actual);
     }
 
     @Test(expected = Exception.class)
