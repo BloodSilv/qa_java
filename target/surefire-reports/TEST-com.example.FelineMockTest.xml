@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="com.example.FelineMockTest" time="0.009" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="com.example.FelineMockTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,9 +60,9 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.example.FelineMockTest" name="eatMeat" time="0.001"/>
-  <testcase classname="com.example.FelineMockTest" name="testGetKittens" time="0.004"/>
-  <testcase classname="com.example.FelineMockTest" name="getKittens" time="0.001"/>
-  <testcase classname="com.example.FelineMockTest" name="getFamily" time="0.002"/>
-  <testcase classname="com.example.FelineMockTest" name="getKittensThreeTimes" time="0.001"/>
+  <testcase classname="com.example.FelineMockTest" name="eatMeat" time="0"/>
+  <testcase classname="com.example.FelineMockTest" name="testGetKittens" time="0"/>
+  <testcase classname="com.example.FelineMockTest" name="getKittens" time="0"/>
+  <testcase classname="com.example.FelineMockTest" name="getFamily" time="0"/>
+  <testcase classname="com.example.FelineMockTest" name="getKittensThreeTimes" time="0"/>
 </testsuite>
