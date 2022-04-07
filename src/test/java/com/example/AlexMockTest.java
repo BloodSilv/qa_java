@@ -19,7 +19,7 @@ public class AlexMockTest {
 
     @Test
     public void getFriendsForAlex() throws Exception {
-        Alex alex = new Alex(this.feline);
+        Alex alex = new Alex(feline);
         List<String> actual = alex.getFriends();
         List<String> expected = Arrays.asList("Марти", "Глория", "Мелман");
         assertEquals(expected,actual);
@@ -27,7 +27,7 @@ public class AlexMockTest {
 
     @Test
     public void getPlaceOfLivingForAlex() throws Exception {
-        Alex alex = new Alex(this.feline);
+        Alex alex = new Alex(feline);
         String actual = alex.getPlaceOfLiving();
         String expected = "Нью-Йоркский зоопарк";
         assertEquals(expected,actual);
@@ -35,7 +35,7 @@ public class AlexMockTest {
 
     @Test
     public void getKittensForAlexZero() throws Exception {
-        Alex alex = new Alex(this.feline);
+        Alex alex = new Alex(feline);
         Mockito.when(feline.getKittens()).thenReturn(0);
         int actual = alex.getKittens();
         int expected = feline.getKittens();

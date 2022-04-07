@@ -12,7 +12,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 public class LionTest {
 
     @Mock
-    Feline feline;
+   private Feline feline;
 
     @Test
     public void getFoodTest() throws Exception {
